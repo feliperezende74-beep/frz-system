@@ -168,11 +168,11 @@ export default function Home() {
   )}`;
 
   return (
-    <div className="min-h-screen bg-[#060a06]">
+    <div className="min-h-screen bg-white">
       {/* Navbar */}
       <nav
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-          scrolled ? "bg-[#060a06]/95 backdrop-blur-md border-b border-green-900/30 py-3" : "py-5"
+          scrolled ? "bg-white/95 backdrop-blur-md border-b border-gray-100 shadow-sm py-3" : "py-5"
         }`}
       >
         <div className="max-w-6xl mx-auto px-6 flex items-center justify-between">
@@ -187,13 +187,13 @@ export default function Home() {
 
           {/* Desktop nav */}
           <div className="hidden md:flex items-center gap-8">
-            <a href="#services" className="nav-link text-gray-300 hover:text-green-400 text-sm font-medium">
+            <a href="#services" className="nav-link text-gray-600 hover:text-green-500 text-sm font-medium">
               {t.nav.services}
             </a>
-            <a href="#about" className="nav-link text-gray-300 hover:text-green-400 text-sm font-medium">
+            <a href="#about" className="nav-link text-gray-600 hover:text-green-500 text-sm font-medium">
               {t.nav.about}
             </a>
-            <a href="#contact" className="nav-link text-gray-300 hover:text-green-400 text-sm font-medium">
+            <a href="#contact" className="nav-link text-gray-600 hover:text-green-500 text-sm font-medium">
               {t.nav.contact}
             </a>
 
@@ -209,7 +209,7 @@ export default function Home() {
 
           {/* Mobile menu button */}
           <button
-            className="md:hidden text-gray-300 hover:text-green-400"
+            className="md:hidden text-gray-600 hover:text-green-500"
             onClick={() => setMenuOpen(!menuOpen)}
           >
             <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -224,10 +224,10 @@ export default function Home() {
 
         {/* Mobile menu */}
         {menuOpen && (
-          <div className="md:hidden bg-[#060a06]/98 border-t border-green-900/30 px-6 py-4 flex flex-col gap-4">
-            <a href="#services" onClick={() => setMenuOpen(false)} className="text-gray-300 hover:text-green-400 font-medium">{t.nav.services}</a>
-            <a href="#about" onClick={() => setMenuOpen(false)} className="text-gray-300 hover:text-green-400 font-medium">{t.nav.about}</a>
-            <a href="#contact" onClick={() => setMenuOpen(false)} className="text-gray-300 hover:text-green-400 font-medium">{t.nav.contact}</a>
+          <div className="md:hidden bg-white border-t border-gray-100 px-6 py-4 flex flex-col gap-4">
+            <a href="#services" onClick={() => setMenuOpen(false)} className="text-gray-600 hover:text-green-500 font-medium">{t.nav.services}</a>
+            <a href="#about" onClick={() => setMenuOpen(false)} className="text-gray-600 hover:text-green-500 font-medium">{t.nav.about}</a>
+            <a href="#contact" onClick={() => setMenuOpen(false)} className="text-gray-600 hover:text-green-500 font-medium">{t.nav.contact}</a>
             <button
               onClick={() => setLang(lang === "pt" ? "en" : "pt")}
               className="w-fit flex items-center gap-1 px-3 py-1.5 rounded-full border border-green-500/30 text-green-400 text-xs font-semibold"
@@ -261,15 +261,15 @@ export default function Home() {
           </div>
 
           <h1 className="text-6xl md:text-8xl font-black mb-6 animate-fade-in-up leading-none tracking-tight" style={{ animationDelay: "0.1s" }}>
-            <span className="text-white">{t.hero.title} </span>
+            <span className="text-gray-900">{t.hero.title} </span>
             <span className="gradient-text">{t.hero.titleHighlight}</span>
           </h1>
 
-          <p className="text-xl md:text-2xl text-green-300 font-medium mb-6 animate-fade-in-up" style={{ animationDelay: "0.2s" }}>
+          <p className="text-xl md:text-2xl text-green-600 font-medium mb-6 animate-fade-in-up" style={{ animationDelay: "0.2s" }}>
             {t.hero.tagline}
           </p>
 
-          <p className="text-gray-400 text-lg max-w-2xl mx-auto mb-10 leading-relaxed animate-fade-in-up" style={{ animationDelay: "0.3s" }}>
+          <p className="text-gray-500 text-lg max-w-2xl mx-auto mb-10 leading-relaxed animate-fade-in-up" style={{ animationDelay: "0.3s" }}>
             {t.hero.description}
           </p>
 
@@ -306,7 +306,7 @@ export default function Home() {
             <span className="text-green-400 text-sm font-semibold uppercase tracking-widest mb-3 block">
               {t.services.title}
             </span>
-            <h2 className="text-4xl md:text-5xl font-bold text-white">
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-900">
               {t.services.subtitle}
             </h2>
           </div>
@@ -315,10 +315,10 @@ export default function Home() {
             {t.services.items.map((service, i) => (
               <div
                 key={i}
-                className="glass rounded-2xl p-8 card-hover"
+                className="bg-gray-50 border border-gray-100 rounded-2xl p-8 card-hover"
               >
                 <div className="text-4xl mb-5">{service.icon}</div>
-                <h3 className="text-2xl font-bold text-white mb-3">{service.title}</h3>
+                <h3 className="text-2xl font-bold text-gray-900 mb-3">{service.title}</h3>
                 <p className="text-gray-400 leading-relaxed">{service.description}</p>
                 <div className="mt-6 w-12 h-0.5 bg-green-500/40 rounded" />
               </div>
@@ -336,7 +336,7 @@ export default function Home() {
               <span className="text-green-400 text-sm font-semibold uppercase tracking-widest mb-3 block">
                 {t.about.title}
               </span>
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+              <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
                 {t.about.subtitle}
               </h2>
               <p className="text-gray-400 leading-relaxed mb-5 text-lg">
@@ -349,21 +349,21 @@ export default function Home() {
 
             <div className="grid grid-cols-3 gap-6">
               {t.about.stats.map((stat, i) => (
-                <div key={i} className="glass rounded-2xl p-6 text-center card-hover">
+                <div key={i} className="bg-gray-50 border border-gray-100 rounded-2xl p-6 text-center card-hover">
                   <div className="text-3xl md:text-4xl font-black gradient-text mb-2">{stat.value}</div>
                   <div className="text-gray-400 text-sm font-medium">{stat.label}</div>
                 </div>
               ))}
 
               {/* Visual decoration */}
-              <div className="col-span-3 glass rounded-2xl p-6 flex items-center gap-4">
+              <div className="col-span-3 bg-gray-50 border border-gray-100 rounded-2xl p-6 flex items-center gap-4">
                 <div className="w-12 h-12 bg-green-500/20 rounded-xl flex items-center justify-center flex-shrink-0">
                   <svg className="w-6 h-6 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                   </svg>
                 </div>
                 <div>
-                  <div className="text-white font-semibold text-sm">
+                  <div className="text-gray-800 font-semibold text-sm">
                     {lang === "pt" ? "Soluções entregues com qualidade" : "Solutions delivered with quality"}
                   </div>
                   <div className="text-gray-500 text-xs mt-0.5">
@@ -382,7 +382,7 @@ export default function Home() {
           <span className="text-green-400 text-sm font-semibold uppercase tracking-widest mb-3 block">
             {t.contact.title}
           </span>
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
+          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
             {t.contact.subtitle}
           </h2>
 
@@ -390,14 +390,14 @@ export default function Home() {
             {/* Email */}
             <a
               href="mailto:felipecrezende@outlook.com.br"
-              className="glass rounded-2xl p-7 card-hover flex flex-col items-center gap-3 group"
+              className="bg-gray-50 border border-gray-100 rounded-2xl p-7 card-hover flex flex-col items-center gap-3 group"
             >
               <div className="w-12 h-12 bg-green-500/15 rounded-xl flex items-center justify-center group-hover:bg-green-500/25 transition-colors">
                 <svg className="w-5 h-5 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                 </svg>
               </div>
-              <span className="text-gray-300 font-medium text-sm">{t.contact.email}</span>
+              <span className="text-gray-500 font-medium text-sm">{t.contact.email}</span>
               <span className="text-green-400 text-sm font-semibold break-all">felipecrezende@outlook.com.br</span>
             </a>
 
@@ -406,7 +406,7 @@ export default function Home() {
               href={whatsappLink}
               target="_blank"
               rel="noopener noreferrer"
-              className="glass rounded-2xl p-7 card-hover flex flex-col items-center gap-3 group"
+              className="bg-gray-50 border border-gray-100 rounded-2xl p-7 card-hover flex flex-col items-center gap-3 group"
             >
               <div className="w-12 h-12 bg-green-500/15 rounded-xl flex items-center justify-center group-hover:bg-green-500/25 transition-colors">
                 <svg className="w-5 h-5 text-green-400" fill="currentColor" viewBox="0 0 24 24">
@@ -414,7 +414,7 @@ export default function Home() {
                   <path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm.029 18.88a7.947 7.947 0 01-3.794-.964l-4.213 1.104 1.126-4.111A7.942 7.942 0 014.05 11.03c0-4.399 3.577-7.977 7.979-7.977a7.98 7.98 0 017.978 7.978c0 4.4-3.578 7.849-7.978 7.849z" />
                 </svg>
               </div>
-              <span className="text-gray-300 font-medium text-sm">{t.contact.whatsapp}</span>
+              <span className="text-gray-500 font-medium text-sm">{t.contact.whatsapp}</span>
               <span className="text-green-400 text-sm font-semibold">(11) 97373-2567</span>
             </a>
 
@@ -423,14 +423,14 @@ export default function Home() {
               href="https://www.linkedin.com/in/felipe-r-373a6b131/"
               target="_blank"
               rel="noopener noreferrer"
-              className="glass rounded-2xl p-7 card-hover flex flex-col items-center gap-3 group"
+              className="bg-gray-50 border border-gray-100 rounded-2xl p-7 card-hover flex flex-col items-center gap-3 group"
             >
               <div className="w-12 h-12 bg-green-500/15 rounded-xl flex items-center justify-center group-hover:bg-green-500/25 transition-colors">
                 <svg className="w-5 h-5 text-green-400" fill="currentColor" viewBox="0 0 24 24">
                   <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
                 </svg>
               </div>
-              <span className="text-gray-300 font-medium text-sm">{t.contact.linkedin}</span>
+              <span className="text-gray-500 font-medium text-sm">{t.contact.linkedin}</span>
               <span className="text-green-400 text-sm font-semibold">Felipe Rezende</span>
             </a>
           </div>
@@ -451,18 +451,18 @@ export default function Home() {
       </section>
 
       {/* Footer */}
-      <footer className="border-t border-green-900/20 py-8 px-6">
+      <footer className="border-t border-gray-100 py-8 px-6">
         <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
           <div className="flex items-center gap-2">
             <div className="w-6 h-6 bg-green-500 rounded-md flex items-center justify-center">
               <span className="text-black font-black text-xs">FZ</span>
             </div>
-            <span className="text-gray-400 text-sm font-medium">FRZ System</span>
+            <span className="text-gray-500 text-sm font-medium">FRZ System</span>
           </div>
-          <p className="text-gray-600 text-sm">
+          <p className="text-gray-400 text-sm">
             © {new Date().getFullYear()} FRZ System. {t.footer.rights}
           </p>
-          <div className="flex items-center gap-1 text-gray-600 text-xs">
+          <div className="flex items-center gap-1 text-gray-400 text-xs">
             <span className="w-1.5 h-1.5 bg-green-500 rounded-full animate-pulse" />
             <span>{lang === "pt" ? "Online" : "Online"}</span>
           </div>
