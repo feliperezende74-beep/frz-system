@@ -178,7 +178,7 @@ export default function Home() {
         <div className="max-w-6xl mx-auto px-6 flex items-center justify-between">
           <a href="#" className="flex items-center gap-2">
             <div className="w-8 h-8 bg-green-500 rounded-lg flex items-center justify-center">
-              <span className="text-black font-black text-sm">FZ</span>
+              <span className="text-black font-black text-xs">FRZ</span>
             </div>
             <span className="font-bold text-lg text-white">
               FRZ <span className="text-green-400">System</span>
